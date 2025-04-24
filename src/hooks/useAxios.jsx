@@ -4,7 +4,7 @@ const token = JSON.parse(localStorage.getItem("auth"))
 
 const axiosPublic = axios.create({
   // baseURL: "http://localhost:5000/api",
-  baseURL: "https://https://ayotto-test-server-five.vercel.app/api",
+  baseURL: "https://ayotto-test-server-five.vercel.app/api",
   withCredentials: true,
   headers:{
     Authorization: `${token?.token}`
