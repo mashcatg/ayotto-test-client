@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-primary: "Bricolage Grotesque", serif;
+  --breakpoint-xs: 455px;
+  --color-primary: #5271ff;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+* {
+  font-family: "Bricolage Grotesque", serif;
+}
+
+.btn {
+  font-weight: 500;
+  padding: 10px 30px;
+  background-color: #5271ff;
+  border-radius: 30px;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #4365fe;
+}
+
+.nav > a.active {
+  color: #4365fe;
+}
+
+/* dashboard styles */
+
+.dashboard-side-nav a.active {
+  background-color: #edf1ff;
+  color: #516ffa;
+}
+.react-tabs__tab--selected {
+  background-color: #fff;
+  border: none;
+  outline: none;
+}
+
+/* custom editor styling */
+.ProseMirror p.is-editor-empty:first-child::before {
+  color: #adb5bd;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.ProseMirror {
+  min-height: 100px;
+  outline: none;
+}
+
+/* Headings */
+.ProseMirror h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.ProseMirror h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Lists */
+.ProseMirror ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.ProseMirror ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+}
+
+/* Tables */
+.ProseMirror table {
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.ProseMirror table td,
+.ProseMirror table th {
+  border: 2px solid #e2e8f0;
+  box-sizing: border-box;
+  min-width: 1em;
+  padding: 0.5rem;
+  position: relative;
+  vertical-align: top;
+}
+
+.ProseMirror table th {
+  background-color: #f8fafc;
+  font-weight: bold;
+}
+
+/* Code blocks */
+.ProseMirror pre {
+  background-color: #f1f5f9;
+  border-radius: 0.5rem;
+  color: #334155;
+  font-family: "Menlo", "Monaco", "Courier New", monospace;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  white-space: pre-wrap;
+}
+
+/* Image styling */
+.ProseMirror img {
+  max-height: 400px;
+  object-fit: contain;
+}
+
+/* Highlight */
+.ProseMirror mark {
+  background-color: #fef9c3;
+  border-radius: 0.125rem;
+  padding: 0.05em;
+}
+
+/* Custom styles for the preview mode */
+[id^="preview-container-"] {
+  line-height: 1.5;
+  color: #333;
+}
+
+[id^="preview-container-"] h1,
+[id^="preview-container-"] h2,
+[id^="preview-container-"] h3,
+[id^="preview-container-"] h4,
+[id^="preview-container-"] h5,
+[id^="preview-container-"] h6 {
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+[id^="preview-container-"] p {
+  margin-bottom: 1em;
+}
+
+[id^="preview-container-"] a {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+[id^="preview-container-"] ul,
+.question-content ul {
+  list-style-type: disc !important;
+  padding-left: 1.5em !important;
+  margin-left: 1em !important;
+  margin-bottom: 1em !important;
+}
+
+[id^="preview-container-"] ol,
+.question-content ol {
+  list-style-type: decimal !important;
+  padding-left: 1.5em !important;
+  margin-left: 1em !important;
+  margin-bottom: 1em !important;
+}
+
+[id^="preview-container-"] li,
+.question-content li {
+  display: list-item !important;
+  margin-bottom: 0.5em !important;
+}
+
+[id^="preview-container-"] img {
+  max-width: 100%;
+  border-radius: 0.375rem;
+}
+
+[id^="preview-container-"] table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+[id^="preview-container-"] table td,
+[id^="preview-container-"] table th {
+  border: 1px solid #e5e7eb;
+  padding: 0.5rem;
+}
+
+[id^="preview-container-"] table th {
+  background-color: #f9fafb;
+}
+
+[id^="preview-container-"] blockquote {
+  border-left: 4px solid #e5e7eb;
+  padding-left: 1rem;
+  font-style: italic;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+[id^="preview-container-"] pre {
+  background-color: #f1f5f9;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  overflow-x: auto;
+}
+
+[id^="preview-container-"] code {
+  background-color: #f1f5f9;
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+  font-family: monospace;
+}
+
+/* rendered math formulas */
+[id^="preview-container-"] .math-formula {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 2px;
+}
+
+[id^="preview-container-"] .rendered-math {
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+/* Fix for KaTeX rendering in preview mode */
+[id^="preview-container-"] .katex-display {
+  margin: 1em 0 !important;
+  display: block !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: center;
+}
+
+[id^="preview-container-"] .katex {
+  display: inline-block;
+  font-size: 1.3em;
+}
+
+.question-content {
+  line-height: 1.5;
+}
+
+.question-content .rendered-math {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.question-content img {
+  max-width: 100%;
+  border-radius: 0.25rem;
+}
+
+.question-content table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.question-content table td,
+.question-content table th {
+  border: 1px solid #e2e8f0;
+  padding: 0.5rem;
+}
+
+.question-content code {
+  background-color: #f1f1f1;
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.2rem;
+  font-family: monospace;
+}
+
+.option-content p {
+  margin: 0;
+  display: inline;
+}
+
+.question-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 0.5rem 0;
+}
